@@ -14,9 +14,12 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "700"],
 });
 
+import { MotionProvider } from "@/context/MotionContext";
+import { MotionEngineProvider } from "@/components/MotionEngineProvider";
+
 export const metadata: Metadata = {
-  title: "SereneYOLO - Liquid Floating Edition",
-  description: "A radical exploration of suspended aesthetics. We challenge linear grids by creating interfaces that breathe, float, and respond with organic intelligence.",
+  title: "SereneYOLO - Cinematic Portfolio",
+  description: "A premium interactive experience using GSAP, Framer Motion, and Lenis.",
 };
 
 export default function RootLayout({
@@ -25,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="light">
+    <html lang="en" className="light scroll-smooth">
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
@@ -33,9 +36,13 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${manrope.variable} ${jetbrainsMono.variable} antialiased selection:bg-serene-accent/30`}
+        className={`${manrope.variable} ${jetbrainsMono.variable} antialiased selection:bg-primary/30 bg-surface text-on-surface`}
       >
-        {children}
+        <MotionProvider>
+          <MotionEngineProvider>
+            {children}
+          </MotionEngineProvider>
+        </MotionProvider>
       </body>
     </html>
   );

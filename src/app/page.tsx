@@ -8,14 +8,16 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import MobileFAB from "@/components/MobileFAB";
+import MotionSwitcher from "@/components/MotionSwitcher";
 
 export default function Home() {
   return (
     <main className="min-h-screen relative">
       <Header />
       <SideNav />
+      <MotionSwitcher />
 
-      <div className="w-full">
+      <div className="w-full pt-32">
         <Hero />
         <About />
         <TechStack />
