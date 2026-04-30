@@ -49,10 +49,10 @@ const Hero = () => {
             design.
           </motion.p>
           <motion.div variants={FADE_UP[mode]} className="flex flex-wrap gap-4">
-            <button className="bg-primary text-white px-8 py-4 rounded-xl font-bold shadow-[0_10px_20px_rgba(103,80,164,0.3)] hover:scale-105 active:scale-95 transition-all font-manrope">
+            <button className="bg-brand-accent text-white px-8 py-4 rounded-xl font-bold shadow-[0_10px_20px_rgba(247,165,165,0.3)] hover:scale-105 active:scale-95 transition-all font-manrope">
               Explore Work
             </button>
-            <button className="glass-card text-on-surface px-8 py-4 rounded-xl font-bold border border-primary/10 hover:bg-white/80 transition-all active:scale-95 font-manrope">
+            <button className="glass-card text-on-surface px-8 py-4 rounded-xl font-bold border border-white/20 hover:bg-white/80 transition-all active:scale-95 font-manrope">
               Let's Talk
             </button>
           </motion.div>
@@ -81,19 +81,19 @@ const Hero = () => {
       <div
         className={`absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] blur-[120px] rounded-full -z-10 transition-colors duration-1000 ${
           mode === "float"
-            ? "bg-tertiary/20"
+            ? "bg-brand-warm/20"
             : mode === "dynamic"
-            ? "bg-primary/30"
-            : "bg-brand-accent/40 animate-pulse"
+            ? "bg-brand-accent/30"
+            : "bg-primary/40 animate-pulse"
         }`}
       ></div>
       <div
         className={`absolute bottom-0 left-1/4 w-[300px] h-[300px] blur-[100px] rounded-full -z-10 transition-colors duration-1000 ${
           mode === "float"
-            ? "bg-primary/10"
+            ? "bg-brand-accent/10"
             : mode === "dynamic"
-            ? "bg-tertiary/20"
-            : "bg-brand-warm/30"
+            ? "bg-brand-warm/20"
+            : "bg-primary/30"
         }`}
       ></div>
     </section>

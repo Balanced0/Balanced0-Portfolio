@@ -77,10 +77,10 @@ const Projects = () => {
               </div>
               <div className="px-4">
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="px-3 py-1 bg-tertiary-fixed text-on-surface text-xs font-bold rounded-full font-manrope uppercase tracking-widest">
+                  <span className="px-3 py-1 bg-brand-warm text-on-surface text-xs font-bold rounded-full font-manrope uppercase tracking-widest">
                     {project.tag1}
                   </span>
-                  <span className="px-3 py-1 bg-tertiary-fixed text-on-surface text-xs font-bold rounded-full font-manrope uppercase tracking-widest">
+                  <span className="px-3 py-1 bg-brand-warm text-on-surface text-xs font-bold rounded-full font-manrope uppercase tracking-widest">
                     {project.tag2}
                   </span>
                 </div>

@@ -16,6 +16,8 @@ const jetbrainsMono = JetBrains_Mono({
 
 import { MotionProvider } from "@/context/MotionContext";
 import { MotionEngineProvider } from "@/components/MotionEngineProvider";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import MotionSwitcher from "@/components/MotionSwitcher";
 
 export const metadata: Metadata = {
   title: "SereneYOLO - Cinematic Portfolio",
@@ -28,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="light scroll-smooth">
+    <html lang="en" className="light scroll-smooth" suppressHydrationWarning>
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
@@ -38,11 +40,14 @@ export default function RootLayout({
       <body
         className={`${manrope.variable} ${jetbrainsMono.variable} antialiased selection:bg-primary/30 bg-surface text-on-surface`}
       >
-        <MotionProvider>
-          <MotionEngineProvider>
-            {children}
-          </MotionEngineProvider>
-        </MotionProvider>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <MotionProvider>
+            <MotionEngineProvider>
+              <MotionSwitcher />
+              {children}
+            </MotionEngineProvider>
+          </MotionProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

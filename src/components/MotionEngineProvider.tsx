@@ -72,8 +72,8 @@ export const MotionEngineProvider = ({
     // Cinematic fade-in transition for the whole page when switching modes
     gsap.fromTo(
       "body",
-      { opacity: 0.8, filter: "blur(5px)" },
-      { opacity: 1, filter: "blur(0px)", duration: 0.8, ease: "power2.inOut" }
+      { opacity: 0.8 },
+      { opacity: 1, duration: 0.8, ease: "power2.inOut" }
     );
   }, [mode]);
 

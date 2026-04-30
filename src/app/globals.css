@@ -1,19 +1,38 @@
 @import "tailwindcss";
 
 @theme {
+  /* Colors from Serene Professional Design System */
   --color-primary: #4f378a;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #6750a4;
+  --color-on-primary-container: #e0d2ff;
+  --color-inverse-primary: #cfbcff;
+  
+  --color-secondary: #63597c;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #e1d4fd;
+  --color-on-secondary-container: #645a7d;
+
   --color-tertiary: #765b00;
-  --color-brand-accent: #6750a4;
-  --color-brand-dark: #1d1b20;
-  --color-brand-warm: #ffdf93;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #c9a74d;
+  --color-on-tertiary-container: #503d00;
+
   --color-surface: #fdf7ff;
   --color-on-surface: #1d1b20;
+  --color-surface-variant: #e6e0e9;
   --color-on-surface-variant: #494551;
   --color-surface-container-low: #f8f2fa;
-  --color-tertiary-fixed: #ffdf93;
+  --color-surface-dim: #ded8e0;
+  --color-surface-bright: #fdf7ff;
 
+  --color-brand-accent: #F7A5A5; /* Accent Pink from text */
+  --color-brand-warm: #FFDBB6;   /* Warm Beige from text */
+  --color-primary-text: #5D688A; /* Primary Text color from text */
+
+  /* Typography */
   --font-manrope: var(--font-manrope);
-
+  
   --animate-float: float 6s ease-in-out infinite;
 
   @keyframes float {
@@ -23,20 +42,40 @@
 }
 
 :root {
-  --background: #fdf7ff;
+  --background: #FFF2EF; /* Warm peach background from text */
   --foreground: #1d1b20;
+}
+
+.dark {
+  /* Dark Mode M3 Swaps */
+  --color-primary: #cfbcff;
+  --color-on-primary: #381e72;
+  --color-primary-container: #4f378a;
+  --color-on-primary-container: #e9ddff;
+  
+  --color-surface: #1d1b20;
+  --color-on-surface: #e6e0e9;
+  --color-surface-variant: #494551;
+  --color-on-surface-variant: #cbc4d2;
+  --color-surface-container-low: #1d1b20;
+  --color-surface-dim: #1d1b20;
+  --color-surface-bright: #322f35;
+
+  --background: #1d1b20;
+  --foreground: #e6e0e9;
 }
 
 body {
   background-color: var(--background);
   background-image: 
     radial-gradient(at 0% 0%, rgba(103, 80, 164, 0.05) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(255, 223, 147, 0.1) 0px, transparent 50%);
+    radial-gradient(at 100% 0%, rgba(247, 165, 165, 0.1) 0px, transparent 50%);
   color: var(--foreground);
   font-family: var(--font-manrope), sans-serif;
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 body::before {
@@ -47,7 +86,7 @@ body::before {
   width: 100%;
   height: 100%;
   background-image: url("https://grainy-gradients.vercel.app/noise.svg");
-  opacity: 0.05;
+  opacity: 0.03;
   pointer-events: none;
   z-index: 9999;
   mix-blend-mode: overlay;
@@ -58,12 +97,18 @@ body::before {
 }
 
 @utility glass-card {
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 30px 40px rgba(79, 55, 138, 0.05);
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 20px 40px rgba(93, 104, 138, 0.03); /* Diffused shadow as per design */
+}
+
+.dark @utility glass-card {
+  background: rgba(45, 45, 55, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 @utility serene-glow {
-  box-shadow: 0 0 40px 10px rgba(103, 80, 164, 0.1);
+  box-shadow: 0 0 30px 10px rgba(247, 165, 165, 0.2); /* Accent Pink Glow */
 }

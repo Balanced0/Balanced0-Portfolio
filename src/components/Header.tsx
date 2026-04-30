@@ -1,10 +1,18 @@
 "use client";
 
-import React from "react";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 const Header = () => {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
-    <nav className="fixed top-0 w-full z-50 border-b border-white/40 bg-white/60 backdrop-blur-md shadow-[0_20px_30px_rgba(79,55,138,0.05)]">
+    <nav className="fixed top-0 w-full z-50 border-b border-white/40 bg-surface/60 backdrop-blur-md shadow-[0_20px_30px_rgba(79,55,138,0.05)]">
       <div className="flex justify-between items-center h-16 px-8 max-w-7xl mx-auto">
         <div className="text-xl font-bold text-primary flex items-center gap-2">
           <span className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-sm">
@@ -39,10 +47,13 @@ const Header = () => {
           </a>
         </div>
         <div className="flex items-center gap-4">
-          <span className="material-symbols-outlined text-on-surface cursor-pointer p-2 hover:bg-white/40 rounded-full transition-all">
-            dark_mode
+          <span
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="material-symbols-outlined text-on-surface cursor-pointer p-2 hover:bg-white/40 rounded-full transition-all"
+          >
+            {mounted && theme === "dark" ? "light_mode" : "dark_mode"}
           </span>
-          <button className="bg-primary text-white px-6 py-2.5 rounded-full font-bold shadow-[0_0_12px_rgba(103,80,164,0.4)] hover:opacity-90 active:scale-95 transition-all text-sm font-manrope">
+          <button className="bg-brand-accent text-white px-6 py-2.5 rounded-full font-bold shadow-[0_0_12px_rgba(247,165,165,0.4)] hover:opacity-90 active:scale-95 transition-all text-sm font-manrope">
             Hire Me
           </button>
         </div>
