@@ -4,19 +4,16 @@ import React from "react";
 
 const SideNav = () => {
   return (
-    <aside className="fixed left-6 top-1/2 -translate-y-1/2 h-[400px] w-20 flex flex-col items-center justify-around py-8 z-40 bg-serene-bg/80 backdrop-blur-2xl rounded-full border border-white/40 shadow-[30px_0_60px_-15px_rgba(247,165,165,0.1)] floating-artifact">
-      <div className="flex flex-col items-center gap-6">
-        <div className="p-3 bg-serene-accent text-white rounded-full shadow-[0_0_20px_rgba(247,165,165,0.4)]">
-          <span className="material-symbols-outlined">grid_view</span>
+    <aside className="fixed left-8 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
+      <div className="glass-card py-6 px-3 rounded-full flex flex-col gap-6 items-center shadow-lg border border-white/40">
+        <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm shadow-sm cursor-pointer">
+          1
         </div>
-        <div className="p-3 text-serene-blue opacity-70 hover:opacity-100 hover:translate-x-1 transition-all cursor-pointer">
-          <span className="material-symbols-outlined">inventory_2</span>
+        <div className="w-8 h-8 rounded-full bg-white/40 text-primary flex items-center justify-center font-bold text-sm hover:bg-primary/10 transition-colors cursor-pointer">
+          2
         </div>
-        <div className="p-3 text-serene-blue opacity-70 hover:opacity-100 hover:translate-x-1 transition-all cursor-pointer">
-          <span className="material-symbols-outlined">science</span>
-        </div>
-        <div className="p-3 text-serene-blue opacity-70 hover:opacity-100 hover:translate-x-1 transition-all cursor-pointer">
-          <span className="material-symbols-outlined">mail</span>
+        <div className="w-8 h-8 rounded-full bg-white/40 text-primary flex items-center justify-center font-bold text-sm hover:bg-primary/10 transition-colors cursor-pointer">
+          3
         </div>
       </div>
     </aside>

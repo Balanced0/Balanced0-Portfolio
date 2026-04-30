@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-serene-bg: #FFF2EF;
-  --color-serene-accent: #F7A5A5;
-  --color-serene-peach: #FFDBB6;
-  --color-serene-blue: #5D688A;
-  --color-tertiary: #765b00;
-  --color-surface: #fdf7ff;
   --color-primary: #4f378a;
-  --color-on-primary: #ffffff;
-  --color-secondary: #63597c;
+  --color-tertiary: #765b00;
+  --color-brand-accent: #6750a4;
+  --color-brand-dark: #1d1b20;
+  --color-brand-warm: #ffdf93;
+  --color-surface: #fdf7ff;
+  --color-on-surface: #1d1b20;
+  --color-on-surface-variant: #494551;
+  --color-surface-container-low: #f8f2fa;
+  --color-tertiary-fixed: #ffdf93;
 
   --font-manrope: var(--font-manrope);
-  --font-jetbrains: var(--font-jetbrains);
 
   --animate-float: float 6s ease-in-out infinite;
 
@@ -23,40 +23,32 @@
 }
 
 :root {
-  --background: #FFF2EF;
-  --foreground: #5D688A;
+  --background: #fdf7ff;
+  --foreground: #1d1b20;
 }
 
 body {
   background-color: var(--background);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(103, 80, 164, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(255, 223, 147, 0.1) 0px, transparent 50%);
   color: var(--foreground);
-  font-family: var(--font-jetbrains), monospace;
+  font-family: var(--font-manrope), sans-serif;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
 ::selection {
-  background-color: rgba(247, 165, 165, 0.3);
+  background-color: rgba(79, 55, 138, 0.3);
 }
 
 @utility glass-card {
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 30px 40px rgba(79, 55, 138, 0.05);
 }
 
-@utility serene-glow-primary {
-  box-shadow: 0 20px 40px -10px rgba(247, 165, 165, 0.3);
-}
-
-@utility serene-glow-secondary {
-  box-shadow: 0 30px 60px -15px rgba(93, 104, 138, 0.15);
-}
-
-@utility floating-artifact {
-  animation: var(--animate-float);
-}
-
-@utility liquid-blob {
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+@utility serene-glow {
+  box-shadow: 0 0 40px 10px rgba(103, 80, 164, 0.1);
 }
