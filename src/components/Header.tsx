@@ -53,9 +53,12 @@ const Header = () => {
           >
             {mounted && theme === "dark" ? "light_mode" : "dark_mode"}
           </span>
-          <button className="bg-brand-accent text-white px-6 py-2.5 rounded-full font-bold shadow-[0_0_12px_rgba(247,165,165,0.4)] hover:opacity-90 active:scale-95 transition-all text-sm font-manrope">
+          <a
+            href="#contact"
+            className="bg-brand-accent text-white px-6 py-2.5 rounded-full font-bold shadow-[0_0_12px_rgba(247,165,165,0.4)] hover:opacity-90 active:scale-95 transition-all text-sm font-manrope inline-flex items-center"
+          >
             Hire Me
-          </button>
+          </a>
         </div>
       </div>
     </nav>
