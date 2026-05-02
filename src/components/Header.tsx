@@ -62,17 +62,19 @@ const Header = () => {
       <div className="flex justify-between items-center h-24 px-8 max-w-7xl mx-auto">
         <a 
           href="#home" 
-          className="flex items-center"
+          className="flex items-center h-full overflow-visible"
           onClick={() => handleNavLinkClick("home")}
         >
-          <Image
-            src="/images/logo.png"
-            alt="Logo"
-            width={320}
-            height={120}
-            className="h-20 w-auto object-contain"
-            priority
-          />
+          <div className="relative h-10 w-10 flex items-center justify-center">
+            <Image
+              src="/images/logo.png"
+              alt="Logo"
+              width={120}
+              height={120}
+              className="h-24 w-auto max-w-none object-contain scale-[1.3] translate-y-[6px]"
+              priority
+            />
+          </div>
         </a>
         <div className="hidden md:flex items-center gap-8 font-manrope tracking-tight text-on-surface">
           {navLinks.map((link) => (
