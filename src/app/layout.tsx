@@ -21,8 +21,8 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import MotionSwitcher from "@/components/MotionSwitcher";
 
 export const metadata: Metadata = {
-  title: "SereneYOLO - Cinematic Portfolio",
-  description: "A premium interactive experience using GSAP, Framer Motion, and Lenis.",
+  title: "Alvi Portfolio",
+  description: "Personal portfolio of MD. Alvi Chowdhury - Full-stack Developer.",
 };
 
 export default function RootLayout({
@@ -37,6 +37,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
         />
+        <link rel="icon" href="/images/logo.png" />
       </head>
       <body
         className={`${manrope.variable} ${jetbrainsMono.variable} antialiased`}

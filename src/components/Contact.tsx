@@ -25,7 +25,7 @@ const Contact = () => {
                     <span className="material-symbols-outlined">mail</span>
                   </div>
                   <span className="font-semibold font-manrope">
-                    hello@creative-dev.com
+                    alvichowdhury013@gmail.com
                   </span>
                 </div>
                 <div className="flex items-center gap-4">
