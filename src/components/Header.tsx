@@ -3,6 +3,8 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
+import Image from "next/image";
+
 const Header = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -13,13 +15,17 @@ const Header = () => {
 
   return (
     <nav className="fixed top-0 w-full z-50 border-b border-white/40 bg-surface/60 backdrop-blur-md shadow-[0_20px_30px_rgba(79,55,138,0.05)]">
-      <div className="flex justify-between items-center h-16 px-8 max-w-7xl mx-auto">
-        <div className="text-xl font-bold text-primary flex items-center gap-2">
-          <span className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-sm">
-            P
-          </span>
-          <span className="tracking-tight font-manrope">Portfolio</span>
-        </div>
+      <div className="flex justify-between items-center h-24 px-8 max-w-7xl mx-auto">
+        <a href="#home" className="flex items-center">
+          <Image
+            src="/images/logo.png"
+            alt="Logo"
+            width={320}
+            height={120}
+            className="h-20 w-auto object-contain"
+            priority
+          />
+        </a>
         <div className="hidden md:flex items-center gap-8 font-manrope tracking-tight text-on-surface">
           <a
             className="text-primary font-semibold border-b-2 border-primary transition-colors duration-300"

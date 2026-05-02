@@ -12,13 +12,17 @@ const Footer = () => {
         <div className="flex gap-12">
           <a
             className="font-manrope text-xs uppercase tracking-widest text-on-surface/50 hover:text-primary transition-colors"
-            href="#"
+            href="https://www.linkedin.com/in/md-alvi-chowdhury/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             LinkedIn
           </a>
           <a
             className="font-manrope text-xs uppercase tracking-widest text-on-surface/50 hover:text-primary transition-colors"
-            href="#"
+            href="https://github.com/Balanced0"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             GitHub
           </a>
