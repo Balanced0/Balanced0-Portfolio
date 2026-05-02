@@ -137,7 +137,7 @@ const Projects = () => {
         viewport={{ once: true }}
         variants={STAGGER_CHILDREN[mode]}
       >
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-16 gap-8 text-center md:text-left">
           <motion.div variants={FADE_UP[mode]}>
             <span className="text-primary font-bold text-xs tracking-widest uppercase font-manrope">
               Portfolio

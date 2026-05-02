@@ -24,12 +24,14 @@ const Hero = () => {
         key={mode} // Re-animate on mode change
       >
         <div className="z-10 order-2 lg:order-1">
-          <motion.span
-            variants={FADE_UP[mode]}
-            className="text-primary font-bold text-xs tracking-widest mb-4 block uppercase font-manrope"
-          >
-            Available for New Projects
-          </motion.span>
+          <motion.div variants={FADE_UP[mode]} className="mb-6">
+            <span className="text-primary font-bold text-xs tracking-widest uppercase font-manrope block mb-2">
+              Available for New Projects
+            </span>
+            <h2 className="text-2xl md:text-3xl font-bold text-on-surface font-manrope">
+              MD. Alvi Chowdhury
+            </h2>
+          </motion.div>
           <motion.h1
             variants={FADE_UP[mode]}
             className="text-5xl md:text-7xl font-bold text-on-surface mb-6 leading-tight font-manrope"

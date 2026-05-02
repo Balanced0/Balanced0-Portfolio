@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="w-full border-t border-white/40 bg-surface-container/50 backdrop-blur-sm mt-16">
       <div className="flex flex-col md:flex-row justify-between items-center py-12 px-8 max-w-7xl mx-auto">
         <p className="font-manrope text-xs uppercase tracking-widest text-on-surface/50 mb-8 md:mb-0">
-          © 2024 PORTFOLIO DESIGN. ALL RIGHTS RESERVED.
+          © 2026 Alvi. All rights reserved.
         </p>
         <div className="flex gap-12">
           <a
