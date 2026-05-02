@@ -37,13 +37,13 @@ const About = () => {
             </p>
             <div className="grid grid-cols-2 gap-4 pt-4">
               <div className="p-6 glass-card rounded-2xl">
-                <h4 className="text-primary font-bold text-3xl">5+</h4>
+                <h4 className="text-primary font-bold text-3xl">3+</h4>
                 <p className="text-xs uppercase tracking-widest text-on-surface/50 font-bold mt-1">
                   Years Exp.
                 </p>
               </div>
               <div className="p-6 glass-card rounded-2xl">
-                <h4 className="text-primary font-bold text-3xl">40+</h4>
+                <h4 className="text-primary font-bold text-3xl">10+</h4>
                 <p className="text-xs uppercase tracking-widest text-on-surface/50 font-bold mt-1">
                   Projects Delivered
                 </p>
