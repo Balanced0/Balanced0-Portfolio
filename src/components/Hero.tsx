@@ -69,8 +69,8 @@ const Hero = () => {
             className="relative w-full max-w-md aspect-[4/5] rounded-[3rem] overflow-hidden glass-card p-3 shadow-2xl"
           >
             <Image
-              src="https://lh3.googleusercontent.com/aida/ADBb0ui9RXqBV82uiQWPON54dGSN407q6UiUKsmvVguSj_2SLLutSgepVKX1RvdI7KsprzmMowgHZCihUJjOt6etyRbqsfj_Vy71dFcPJp552V0Xue-xAKuZSX_MVJ7uTwv2l6wx2eJhnIepaCAru24YAwom-1kXzvH3vnvBx4Y0S2y9Ls89wEvqZrtFABLRIGMK-WloermuwYDdU5afD3fQNZH0Eg20IwbnYQJV0Cd9C7LBvL8cyf9kqdrRwxThGMYtcWWQ4-jRH1eucg"
-              alt="Professional portrait"
+              src="/images/Alvi.jpg"
+              alt="MD. Alvi Chowdhury"
               fill
               className="object-cover rounded-[2.5rem]"
               priority
